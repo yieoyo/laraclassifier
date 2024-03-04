@@ -1,0 +1,288 @@
+name: Categories
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/categories
+    metadata:
+      groupName: Categories
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List categories'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      parentId:
+        name: parentId
+        description: 'The ID of the parent category of the sub categories to retrieve.'
+        required: false
+        example: 0
+        type: integer
+        enumValues: []
+        custom: []
+      nestedIncluded:
+        name: nestedIncluded
+        description: 'If parent ID is not provided, are nested entries will be included? - Possible values: 0,1.'
+        required: false
+        example: 0
+        type: integer
+        enumValues: []
+        custom: []
+      embed:
+        name: embed
+        description: 'The Comma-separated list of the category relationships for Eager Loading - Possible values: parent,children.'
+        required: false
+        example: 'null'
+        type: string
+        enumValues: []
+        custom: []
+      sort:
+        name: sort
+        description: 'The sorting parameter (Order by DESC with the given column. Use "-" as prefix to order by ASC). Possible values: lft.'
+        required: false
+        example: '-lft'
+        type: string
+        enumValues: []
+        custom: []
+      perPage:
+        name: perPage
+        description: 'Items per page. Can be defined globally from the admin settings. Cannot be exceeded 100.'
+        required: false
+        example: 2
+        type: integer
+        enumValues: []
+        custom: []
+      page:
+        name: page
+        description: 'Items page number. From 1 to ("total items" divided by "items per page value - perPage").'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        custom: []
+    cleanQueryParameters:
+      parentId: 0
+      nestedIncluded: 0
+      embed: 'null'
+      sort: '-lft'
+      perPage: 2
+      page: 1
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":{"data":[{"id":1,"parent_id":null,"name":"Automobiles","slug":"automobiles","description":"","hide_description":null,"picture":"app\/categories\/blue\/car.png","icon_class":"fas fa-car","seo_title":"","seo_description":"","seo_keywords":"","lft":1,"rgt":10,"depth":0,"type":"classified","is_for_permanent":0,"active":1,"picture_url":"https:\/\/demo.laraclassifier.local\/storage\/app\/categories\/blue\/thumb-70x70-car.png","parentClosure":null},{"id":9,"parent_id":null,"name":"Phones & Tablets","slug":"phones-and-tablets","description":"","hide_description":null,"picture":"app\/categories\/blue\/mobile-alt.png","icon_class":"fas fa-mobile-alt","seo_title":"","seo_description":"","seo_keywords":"","lft":11,"rgt":17,"depth":0,"type":"classified","is_for_permanent":0,"active":1,"picture_url":"https:\/\/demo.laraclassifier.local\/storage\/app\/categories\/blue\/thumb-70x70-mobile-alt.png","parentClosure":null}],"links":{"first":"https:\/\/demo.laraclassifier.local\/api\/categories?page=1","last":"https:\/\/demo.laraclassifier.local\/api\/categories?page=6","prev":null,"next":"https:\/\/demo.laraclassifier.local\/api\/categories?page=2"},"meta":{"current_page":1,"from":1,"last_page":6,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"https:\/\/demo.laraclassifier.local\/api\/categories?page=1","label":"1","active":true},{"url":"https:\/\/demo.laraclassifier.local\/api\/categories?page=2","label":"2","active":false},{"url":"https:\/\/demo.laraclassifier.local\/api\/categories?page=3","label":"3","active":false},{"url":"https:\/\/demo.laraclassifier.local\/api\/categories?page=4","label":"4","active":false},{"url":"https:\/\/demo.laraclassifier.local\/api\/categories?page=5","label":"5","active":false},{"url":"https:\/\/demo.laraclassifier.local\/api\/categories?page=6","label":"6","active":false},{"url":"https:\/\/demo.laraclassifier.local\/api\/categories?page=2","label":"Next &raquo;","active":false}],"path":"https:\/\/demo.laraclassifier.local\/api\/categories","per_page":2,"to":2,"total":12}}}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/categories/{slugOrId}'
+    metadata:
+      groupName: Categories
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get category'
+      description: 'Get category by its unique slug or ID.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters:
+      slugOrId:
+        name: slugOrId
+        description: 'The slug or ID of the category.'
+        required: true
+        example: cars
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      slugOrId: cars
+    queryParameters:
+      parentCatSlug:
+        name: parentCatSlug
+        description: "The slug of the parent category to retrieve used when category's slug provided instead of ID."
+        required: false
+        example: automobiles
+        type: string
+        enumValues: []
+        custom: []
+    cleanQueryParameters:
+      parentCatSlug: automobiles
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":{"id":2,"parent_id":1,"name":"Cars","slug":"cars","description":"","hide_description":null,"picture":"app\/default\/categories\/fa-folder-blue.png","icon_class":"fas fa-folder","seo_title":"","seo_description":"","seo_keywords":"","lft":2,"rgt":3,"depth":1,"type":"classified","is_for_permanent":0,"active":1,"picture_url":"https:\/\/demo.laraclassifier.local\/storage\/app\/default\/categories\/thumb-70x70-fa-folder-blue.png"}}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/categories/{id}/fields'
+    metadata:
+      groupName: Categories
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "List category's fields"
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the category.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      language_code:
+        name: language_code
+        description: "The code of the user's spoken language."
+        required: false
+        example: en
+        type: string
+        enumValues: []
+        custom: []
+      post_id:
+        name: post_id
+        description: 'The unique ID of the post.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      language_code: en
+      post_id: 1
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":[{"id":1,"belongs_to":"post","name":"Car Brand","type":"select","max":null,"default_value":"58","required":1,"use_as_filter":1,"help":"","active":1,"options":[{"id":1,"field_id":1,"value":"Toyota","parent_id":null,"lft":1,"rgt":2,"depth":null},{"id":2,"field_id":1,"value":"BMW","parent_id":null,"lft":3,"rgt":4,"depth":null},{"id":3,"field_id":1,"value":"Mercedes-Benz","parent_id":null,"lft":5,"rgt":6,"depth":null},{"id":4,"field_id":1,"value":"Chevrolet","parent_id":null,"lft":7,"rgt":8,"depth":null},{"id":5,"field_id":1,"value":"Cadillac","parent_id":null,"lft":9,"rgt":10,"depth":null},{"id":6,"field_id":1,"value":"Buick","parent_id":null,"lft":11,"rgt":12,"depth":null},{"id":7,"field_id":1,"value":"GMC","parent_id":null,"lft":13,"rgt":14,"depth":null},{"id":8,"field_id":1,"value":"Ford","parent_id":null,"lft":15,"rgt":16,"depth":null},{"id":9,"field_id":1,"value":"Chrysler","parent_id":null,"lft":17,"rgt":18,"depth":null},{"id":10,"field_id":1,"value":"Dodge","parent_id":null,"lft":19,"rgt":20,"depth":null},{"id":11,"field_id":1,"value":"Jeep","parent_id":null,"lft":21,"rgt":22,"depth":null},{"id":12,"field_id":1,"value":"Tesla","parent_id":null,"lft":23,"rgt":24,"depth":null},{"id":13,"field_id":1,"value":"Lexus","parent_id":null,"lft":25,"rgt":26,"depth":null},{"id":14,"field_id":1,"value":"Suzuki","parent_id":null,"lft":27,"rgt":28,"depth":null},{"id":15,"field_id":1,"value":"Mazda","parent_id":null,"lft":29,"rgt":30,"depth":null},{"id":16,"field_id":1,"value":"Honda","parent_id":null,"lft":31,"rgt":32,"depth":null},{"id":17,"field_id":1,"value":"Acura","parent_id":null,"lft":33,"rgt":34,"depth":null},{"id":18,"field_id":1,"value":"Mitsubishi","parent_id":null,"lft":35,"rgt":36,"depth":null},{"id":19,"field_id":1,"value":"Nissan","parent_id":null,"lft":37,"rgt":38,"depth":null},{"id":20,"field_id":1,"value":"Infiniti","parent_id":null,"lft":39,"rgt":40,"depth":null},{"id":21,"field_id":1,"value":"Audi","parent_id":null,"lft":41,"rgt":42,"depth":null},{"id":22,"field_id":1,"value":"Volkswagen","parent_id":null,"lft":43,"rgt":44,"depth":null},{"id":23,"field_id":1,"value":"Porsche","parent_id":null,"lft":45,"rgt":46,"depth":null},{"id":24,"field_id":1,"value":"Opel","parent_id":null,"lft":47,"rgt":48,"depth":null},{"id":25,"field_id":1,"value":"Jaguar","parent_id":null,"lft":49,"rgt":50,"depth":null},{"id":26,"field_id":1,"value":"Land Rover","parent_id":null,"lft":51,"rgt":52,"depth":null},{"id":27,"field_id":1,"value":"MINI","parent_id":null,"lft":53,"rgt":54,"depth":null},{"id":28,"field_id":1,"value":"Aston Martin","parent_id":null,"lft":55,"rgt":56,"depth":null},{"id":29,"field_id":1,"value":"Bentley","parent_id":null,"lft":57,"rgt":58,"depth":null},{"id":30,"field_id":1,"value":"Rolls-Royce","parent_id":null,"lft":59,"rgt":60,"depth":null},{"id":31,"field_id":1,"value":"McLaren","parent_id":null,"lft":61,"rgt":62,"depth":null},{"id":32,"field_id":1,"value":"Fiat","parent_id":null,"lft":63,"rgt":64,"depth":null},{"id":33,"field_id":1,"value":"Alfa Romeo","parent_id":null,"lft":65,"rgt":66,"depth":null},{"id":34,"field_id":1,"value":"Maserati","parent_id":null,"lft":67,"rgt":68,"depth":null},{"id":35,"field_id":1,"value":"Ferrari","parent_id":null,"lft":69,"rgt":70,"depth":null},{"id":36,"field_id":1,"value":"Lamborghini","parent_id":null,"lft":71,"rgt":72,"depth":null},{"id":37,"field_id":1,"value":"Pagani","parent_id":null,"lft":73,"rgt":74,"depth":null},{"id":38,"field_id":1,"value":"Lancia","parent_id":null,"lft":75,"rgt":76,"depth":null},{"id":39,"field_id":1,"value":"Renault","parent_id":null,"lft":77,"rgt":78,"depth":null},{"id":40,"field_id":1,"value":"Peugeot","parent_id":null,"lft":79,"rgt":80,"depth":null},{"id":41,"field_id":1,"value":"Citroen","parent_id":null,"lft":81,"rgt":82,"depth":null},{"id":42,"field_id":1,"value":"Bugatti","parent_id":null,"lft":83,"rgt":84,"depth":null},{"id":43,"field_id":1,"value":"Tata","parent_id":null,"lft":85,"rgt":86,"depth":null},{"id":44,"field_id":1,"value":"Hyundai","parent_id":null,"lft":87,"rgt":88,"depth":null},{"id":45,"field_id":1,"value":"Kia","parent_id":null,"lft":89,"rgt":90,"depth":null},{"id":46,"field_id":1,"value":"Daewoo","parent_id":null,"lft":91,"rgt":92,"depth":null},{"id":47,"field_id":1,"value":"Volvo","parent_id":null,"lft":93,"rgt":94,"depth":null},{"id":48,"field_id":1,"value":"Saab","parent_id":null,"lft":95,"rgt":96,"depth":null},{"id":49,"field_id":1,"value":"Lada","parent_id":null,"lft":97,"rgt":98,"depth":null},{"id":50,"field_id":1,"value":"Volga","parent_id":null,"lft":99,"rgt":100,"depth":null},{"id":51,"field_id":1,"value":"Zil","parent_id":null,"lft":101,"rgt":102,"depth":null},{"id":52,"field_id":1,"value":"GAZ","parent_id":null,"lft":103,"rgt":104,"depth":null},{"id":53,"field_id":1,"value":"Geely","parent_id":null,"lft":105,"rgt":106,"depth":null},{"id":54,"field_id":1,"value":"Chery","parent_id":null,"lft":107,"rgt":108,"depth":null},{"id":55,"field_id":1,"value":"Hongqi","parent_id":null,"lft":109,"rgt":110,"depth":null},{"id":56,"field_id":1,"value":"Dacia","parent_id":null,"lft":111,"rgt":112,"depth":null},{"id":57,"field_id":1,"value":"Daihatsu","parent_id":null,"lft":113,"rgt":114,"depth":null},{"id":58,"field_id":1,"value":"FIAT","parent_id":null,"lft":115,"rgt":116,"depth":null},{"id":59,"field_id":1,"value":"Genesis","parent_id":null,"lft":117,"rgt":118,"depth":null},{"id":60,"field_id":1,"value":"Isuzu","parent_id":null,"lft":119,"rgt":120,"depth":null},{"id":61,"field_id":1,"value":"Lincoln","parent_id":null,"lft":121,"rgt":122,"depth":null},{"id":62,"field_id":1,"value":"Lotus","parent_id":null,"lft":123,"rgt":124,"depth":null},{"id":63,"field_id":1,"value":"Ram","parent_id":null,"lft":125,"rgt":126,"depth":null},{"id":64,"field_id":1,"value":"Ram","parent_id":null,"lft":127,"rgt":128,"depth":null},{"id":65,"field_id":1,"value":"SEAT","parent_id":null,"lft":129,"rgt":130,"depth":null},{"id":66,"field_id":1,"value":"Skoda","parent_id":null,"lft":131,"rgt":132,"depth":null},{"id":67,"field_id":1,"value":"Smart","parent_id":null,"lft":133,"rgt":134,"depth":null},{"id":68,"field_id":1,"value":"Subaru","parent_id":null,"lft":135,"rgt":136,"depth":null},{"id":69,"field_id":1,"value":"Other","parent_id":null,"lft":137,"rgt":138,"depth":null}]},{"id":2,"belongs_to":"post","name":"Car Model","type":"text","max":null,"default_value":"ratione","required":0,"use_as_filter":0,"help":"","active":1,"options":[]},{"id":3,"belongs_to":"post","name":"Year of registration","type":"number","max":null,"default_value":"2022","required":0,"use_as_filter":0,"help":"","active":1,"options":[]},{"id":5,"belongs_to":"post","name":"Fuel Type","type":"select","max":null,"default_value":"70","required":0,"use_as_filter":1,"help":"","active":1,"options":[{"id":70,"field_id":5,"value":"Essence","parent_id":null,"lft":139,"rgt":140,"depth":null},{"id":71,"field_id":5,"value":"Diesel","parent_id":null,"lft":141,"rgt":142,"depth":null}]},{"id":7,"belongs_to":"post","name":"Transmission","type":"radio","max":null,"default_value":"76","required":0,"use_as_filter":1,"help":"","active":1,"options":[{"id":76,"field_id":7,"value":"Automatic","parent_id":null,"lft":151,"rgt":152,"depth":null},{"id":77,"field_id":7,"value":"Manual","parent_id":null,"lft":153,"rgt":154,"depth":null}]},{"id":8,"belongs_to":"post","name":"Condition","type":"select","max":null,"default_value":"79","required":0,"use_as_filter":1,"help":"","active":1,"options":[{"id":78,"field_id":8,"value":"New","parent_id":null,"lft":155,"rgt":156,"depth":null},{"id":79,"field_id":8,"value":"Used","parent_id":null,"lft":157,"rgt":158,"depth":null}]},{"id":4,"belongs_to":"post","name":"Mileage","type":"text","max":null,"default_value":"fugiat","required":0,"use_as_filter":0,"help":"","active":1,"options":[]},{"id":6,"belongs_to":"post","name":"Features","type":"checkbox_multiple","max":null,"default_value":{"72":{"id":72,"field_id":6,"value":"Air Conditioner","parent_id":null,"lft":143,"rgt":144,"depth":null},"73":{"id":73,"field_id":6,"value":"GPS","parent_id":null,"lft":145,"rgt":146,"depth":null},"74":{"id":74,"field_id":6,"value":"Security System","parent_id":null,"lft":147,"rgt":148,"depth":null},"75":{"id":75,"field_id":6,"value":"Spare Tire","parent_id":null,"lft":149,"rgt":150,"depth":null}},"required":0,"use_as_filter":1,"help":"","active":1,"options":[{"id":72,"field_id":6,"value":"Air Conditioner","parent_id":null,"lft":143,"rgt":144,"depth":null},{"id":73,"field_id":6,"value":"GPS","parent_id":null,"lft":145,"rgt":146,"depth":null},{"id":74,"field_id":6,"value":"Security System","parent_id":null,"lft":147,"rgt":148,"depth":null},{"id":75,"field_id":6,"value":"Spare Tire","parent_id":null,"lft":149,"rgt":150,"depth":null}]}],"extra":{"errors":[],"oldInput":null}}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/categories/{id}/fields'
+    metadata:
+      groupName: Categories
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "List category's fields"
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the category.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      language_code:
+        name: language_code
+        description: "The code of the user's spoken language."
+        required: false
+        example: en
+        type: string
+        enumValues: []
+        custom: []
+      post_id:
+        name: post_id
+        description: 'The unique ID of the post.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      language_code: en
+      post_id: 1
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

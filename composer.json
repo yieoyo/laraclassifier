@@ -1,0 +1,146 @@
+{
+	"name": "laraclassifier/laraclassifier",
+	"type": "project",
+	"description": "Classified Ads Web Application.",
+	"keywords": [
+		"ads",
+		"classified",
+		"cms",
+		"laravel",
+		"php"
+	],
+	"license": "Envato",
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/bedigit/EloquentDataTable"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/bedigit/guzzle6-adapter"
+		}
+	],
+	"require": {
+		"php": "^8.1",
+		"ext-bcmath": "*",
+		"ext-curl": "*",
+		"ext-fileinfo": "*",
+		"ext-json": "*",
+		"ext-pdo": "*",
+		"aws/aws-sdk-php": "~3.0",
+		"chriskonnertz/open-graph": "~2",
+		"cocur/slugify": "^4.3",
+		"cviebrock/eloquent-sluggable": "^10.0",
+		"doctrine/dbal": "^3.6",
+		"fakerphp/faker": "^1.21.0",
+		"geoip2/geoip2": "^2.12",
+		"guzzlehttp/guzzle": "^7.4",
+		"hashids/hashids": "^5.0.2",
+		"intervention/image": "^2.7",
+		"jackiedo/dotenv-editor": "^2.1",
+		"jaybizzle/crawler-detect": "^1.2",
+		"jaybizzle/laravel-crawler-detect": "^1.2",
+		"lab404/laravel-impersonate": "^1.7",
+		"laracasts/flash": "^3.2",
+		"laravel-notification-channels/twilio": "^3.3.1",
+		"laravel/framework": "^10.0",
+		"laravel/sanctum": "^3.2",
+		"laravel/socialite": "^5.9.1",
+		"laravel/tinker": "^2.8",
+		"laravel/vonage-notification-channel": "^3.2",
+		"league/flysystem-aws-s3-v3": "^3.13",
+		"league/flysystem-ftp": "^3.13",
+		"league/flysystem-sftp-v3": "^3.14",
+		"livecontrol/eloquent-datatable": "dev-master",
+		"mews/purifier": "^3.4",
+		"paypal/paypal-checkout-sdk": "^1.0",
+		"predis/predis": "^2.1",
+		"prologue/alerts": "^1.1",
+		"propaganistas/laravel-phone": "^5.0.3",
+		"spatie/flysystem-dropbox": "^3.0",
+		"spatie/laravel-backup": "^8.1",
+		"spatie/laravel-cookie-consent": "^3.2",
+		"spatie/laravel-feed": "^4.2.1",
+		"spatie/laravel-html": "^3.2",
+		"spatie/laravel-permission": "^5.10",
+		"spatie/laravel-ray": "^1.32",
+		"spatie/laravel-translatable": "^6.4",
+		"symfony/http-client": "^6.0",
+		"symfony/mailgun-mailer": "^6.0",
+		"symfony/postmark-mailer": "^6.0",
+		"vemcogroup/laravel-sparkpost-driver": "^5.0",
+		"watson/sitemap": "^5.1"
+	},
+	"require-dev": {
+		"barryvdh/laravel-debugbar": "^3.7",
+		"knuckleswtf/scribe": "^4.25",
+		"laravel/pint": "^1.0",
+		"laravel/sail": "^1.18",
+		"mockery/mockery": "^1.5",
+		"nunomaduro/collision": "^7.0",
+		"phpunit/phpunit": "^10.0",
+		"spatie/laravel-ignition": "^2.0"
+	},
+	"autoload": {
+		"files": [
+			"app/Helpers/Functions/php.php",
+			"app/Helpers/Functions/laravel.php",
+			"app/Helpers/Functions/install.php",
+			"app/Helpers/Functions/admin.php",
+			"app/Helpers/Functions/api.php",
+			"app/Helpers/Functions/core.php",
+			"app/Helpers/Functions/plugin.php",
+			"app/Helpers/Functions/referrer.php",
+			"app/Helpers/Functions/wordpress.php",
+			"packages/larapen/captcha/src/helpers.php",
+			"packages/larapen/recaptcha/src/app/Helpers/functions.php"
+		],
+		"psr-4": {
+			"App\\": "app/",
+			"Database\\Factories\\": "database/factories/",
+			"Database\\Seeders\\": "database/seeders/",
+			"extras\\": "extras/",
+			"Larapen\\LaravelMetaTags\\": "packages/larapen/laravel-meta-tags/src/",
+			"Larapen\\Honeypot\\": "packages/larapen/honeypot/src/",
+			"Larapen\\Captcha\\": "packages/larapen/captcha/src/",
+			"Larapen\\ReCaptcha\\": "packages/larapen/recaptcha/src/",
+			"Larapen\\Feed\\": "packages/spatie/laravel-feed/src/",
+			"Larapen\\Impersonate\\": "packages/lab404/laravel-impersonate/src/",
+			"Larapen\\LaravelDistance\\": "packages/larapen/laravel-distance/src/",
+			"Larapen\\TextToImage\\": "packages/larapen/texttoimage/src/",
+			"LarapenIlluminate\\": "packages/laravel/framework/src/Illuminate/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
+		}
+	},
+	"scripts": {
+		"post-autoload-dump": [
+			"Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+			"@php artisan package:discover --ansi"
+		],
+		"post-root-package-install": [
+			"@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+		],
+		"post-create-project-cmd": [
+			"@php artisan key:generate --ansi"
+		]
+	},
+	"extra": {
+		"laravel": {
+			"dont-discover": [
+				"lab404/laravel-impersonate",
+				"spatie/laravel-feed"
+			]
+		}
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"preferred-install": "dist",
+		"sort-packages": true
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}

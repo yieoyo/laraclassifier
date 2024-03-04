@@ -1,0 +1,177 @@
+name: 'Saved Posts'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/savedPosts
+    metadata:
+      groupName: 'Saved Posts'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store/Delete saved listing'
+      description: 'Save a post/listing in favorite, or remove it from favorite.'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      post_id:
+        name: post_id
+        description: "The post/listing's ID."
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      post_id: 2
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6gfEa8b5DvcPe63ZV4hkad1'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/savedPosts
+    metadata:
+      groupName: 'Saved Posts'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List saved listings'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      country_code:
+        name: country_code
+        description: "The code of the user's country."
+        required: true
+        example: US
+        type: string
+        enumValues: []
+        custom: []
+      embed:
+        name: embed
+        description: 'The Comma-separated list of the category relationships for Eager Loading - Possible values: post,city,pictures,user.'
+        required: false
+        example: 'null'
+        type: string
+        enumValues: []
+        custom: []
+      sort:
+        name: sort
+        description: 'The sorting parameter (Order by DESC with the given column. Use "-" as prefix to order by ASC). Possible values: created_at.'
+        required: false
+        example: created_at
+        type: string
+        enumValues: []
+        custom: []
+      perPage:
+        name: perPage
+        description: 'Items per page. Can be defined globally from the admin settings. Cannot be exceeded 100.'
+        required: false
+        example: 2
+        type: integer
+        enumValues: []
+        custom: []
+    cleanQueryParameters:
+      country_code: US
+      embed: 'null'
+      sort: created_at
+      perPage: 2
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"success":false,"message":"Unauthenticated or Token Expired, Please Login.","result":null,"error_code":1}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer c1Z8E4V5fPDgv6kdaa3bhe6'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/savedPosts/{ids}'
+    metadata:
+      groupName: 'Saved Posts'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete saved listing(s)'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters:
+      ids:
+        name: ids
+        description: 'The ID or comma-separated IDs list of saved post/listing(s).'
+        required: true
+        example: voluptatem
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      ids: voluptatem
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 68Ebe13DZ6fh5aak4VgvcdP'
+    controller: null
+    method: null
+    route: null
+    custom: []

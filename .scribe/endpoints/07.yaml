@@ -1,0 +1,241 @@
+name: 'Saved Searches'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/savedSearches
+    metadata:
+      groupName: 'Saved Searches'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store/Delete saved search'
+      description: 'Save a search result in favorite, or remove it from favorite.'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      url:
+        name: url
+        description: 'Search URL to save.'
+        required: true
+        example: 'https://demo.laraclassifier.com/search/?q=test&l='
+        type: string
+        enumValues: []
+        custom: []
+      count_posts:
+        name: count_posts
+        description: 'The number of posts found for the URL.'
+        required: true
+        example: 29
+        type: integer
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      url: 'https://demo.laraclassifier.com/search/?q=test&l='
+      count_posts: 29
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer dfD1gbaZ6c3VE58k6hvPae4'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/savedSearches
+    metadata:
+      groupName: 'Saved Searches'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List saved searches'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      embed:
+        name: embed
+        description: 'The Comma-separated list of the category relationships for Eager Loading - Possible values: user,country.'
+        required: false
+        example: 'null'
+        type: string
+        enumValues: []
+        custom: []
+      sort:
+        name: sort
+        description: 'The sorting parameter (Order by DESC with the given column. Use "-" as prefix to order by ASC). Possible values: created_at.'
+        required: false
+        example: created_at
+        type: string
+        enumValues: []
+        custom: []
+      perPage:
+        name: perPage
+        description: 'Items per page. Can be defined globally from the admin settings. Cannot be exceeded 100.'
+        required: false
+        example: 2
+        type: integer
+        enumValues: []
+        custom: []
+    cleanQueryParameters:
+      embed: 'null'
+      sort: created_at
+      perPage: 2
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"success":false,"message":"Unauthenticated or Token Expired, Please Login.","result":null,"error_code":1}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 86e6vE3dbcPkV5aDha1fgZ4'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/savedSearches/{id}'
+    metadata:
+      groupName: 'Saved Searches'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get saved search'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the saved search.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters:
+      embed:
+        name: embed
+        description: 'The Comma-separated list of the category relationships for Eager Loading - Possible values: user,country,pictures,postType,category,city,country.'
+        required: false
+        example: 'null'
+        type: string
+        enumValues: []
+        custom: []
+    cleanQueryParameters:
+      embed: 'null'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"success":false,"message":"Unauthenticated or Token Expired, Please Login.","result":null,"error_code":1}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 84e1Zaa6Vc5hvP3EbDdk6fg'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/savedSearches/{ids}'
+    metadata:
+      groupName: 'Saved Searches'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete saved search(es)'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters:
+      ids:
+        name: ids
+        description: 'The ID or comma-separated IDs list of saved search(es).'
+        required: true
+        example: sit
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      ids: sit
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Dd1bEk648gPae35v6acZhfV'
+    controller: null
+    method: null
+    route: null
+    custom: []

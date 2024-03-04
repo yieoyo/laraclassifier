@@ -1,0 +1,96 @@
+name: Languages
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/languages
+    metadata:
+      groupName: Languages
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List languages'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":{"data":[{"code":"en","locale":"en_US","name":"English","native":"English","flag":"flag-icon-gb","script":"Latn","direction":"ltr","russian_pluralization":0,"date_format":"MMM Do, YYYY","datetime_format":"MMM Do, YYYY [at] HH:mm","active":1,"default":1,"parent_id":null,"lft":2,"rgt":3,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"en_US","tag":"en","primary":"en"},{"code":"fr","locale":"fr_FR","name":"French","native":"Français","flag":"flag-icon-fr","script":"Latn","direction":"ltr","russian_pluralization":0,"date_format":"Do MMM YYYY","datetime_format":"Do MMM YYYY [à] H[h]mm","active":1,"default":0,"parent_id":null,"lft":4,"rgt":5,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"fr_FR","tag":"fr","primary":"fr"},{"code":"es","locale":"es_ES","name":"Spanish","native":"Español","flag":"flag-icon-es","script":"Latn","direction":"ltr","russian_pluralization":0,"date_format":"D [de] MMMM [de] YYYY","datetime_format":"D [de] MMMM [de] YYYY HH:mm","active":1,"default":0,"parent_id":null,"lft":6,"rgt":7,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"es_ES","tag":"es","primary":"es"},{"code":"ar","locale":"ar_SA","name":"Arabic","native":"العربية","flag":"flag-icon-sa","script":"Arab","direction":"rtl","russian_pluralization":0,"date_format":"DD\/MMMM\/YYYY","datetime_format":"DD\/MMMM\/YYYY HH:mm","active":1,"default":0,"parent_id":null,"lft":8,"rgt":9,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"ar_SA","tag":"ar","primary":"ar"},{"code":"pt","locale":"pt_PT","name":"Portuguese","native":"Português","flag":"flag-icon-pt","script":"Latn","direction":"ltr","russian_pluralization":0,"date_format":"D [de] MMMM [de] YYYY","datetime_format":"D [de] MMMM [de] YYYY HH:mm","active":1,"default":0,"parent_id":null,"lft":10,"rgt":11,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"pt_PT","tag":"pt","primary":"pt"},{"code":"de","locale":"de_DE","name":"German","native":"Deutsch","flag":"flag-icon-de","script":"Latn","direction":"ltr","russian_pluralization":0,"date_format":"dddd, D. MMMM YYYY","datetime_format":"dddd, D. MMMM YYYY HH:mm","active":1,"default":0,"parent_id":null,"lft":12,"rgt":13,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"de_DE","tag":"de","primary":"de"},{"code":"it","locale":"it_IT","name":"Italian","native":"Italiano","flag":"flag-icon-it","script":"Latn","direction":"ltr","russian_pluralization":0,"date_format":"D MMMM YYYY","datetime_format":"D MMMM YYYY HH:mm","active":1,"default":0,"parent_id":null,"lft":14,"rgt":15,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"it_IT","tag":"it","primary":"it"},{"code":"tr","locale":"tr_TR.UTF-8","name":"Turkish","native":"Türkçe","flag":"flag-icon-tr","script":"Latn","direction":"ltr","russian_pluralization":0,"date_format":"DD MMMM YYYY dddd","datetime_format":"DD MMMM YYYY dddd HH:mm","active":1,"default":0,"parent_id":null,"lft":16,"rgt":17,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"tr_TR","tag":"tr","primary":"tr"},{"code":"ru","locale":"ru_RU","name":"Russian","native":"Русский","flag":"flag-icon-ru","script":"Cyrl","direction":"ltr","russian_pluralization":1,"date_format":"D MMMM YYYY","datetime_format":"D MMMM YYYY [ г.] H:mm","active":1,"default":0,"parent_id":null,"lft":18,"rgt":19,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"ru_RU","tag":"ru","primary":"ru"},{"code":"hi","locale":"hi_IN","name":"Hindi","native":"हिन्दी","flag":"flag-icon-in","script":"Deva","direction":"ltr","russian_pluralization":0,"date_format":"D MMMM YYYY","datetime_format":"D MMMM YYYY H:mm","active":1,"default":0,"parent_id":null,"lft":20,"rgt":21,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"hi_IN","tag":"hi","primary":"hi"},{"code":"bn","locale":"bn_BD","name":"Bengali","native":"বাংলা","flag":"flag-icon-bd","script":"Beng","direction":"ltr","russian_pluralization":0,"date_format":"D MMMM YYYY","datetime_format":"D MMMM YYYY H.mm","active":1,"default":0,"parent_id":null,"lft":22,"rgt":23,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"bn_BD","tag":"bn","primary":"bn"},{"code":"zh","locale":"zh_CN","name":"Simplified Chinese","native":"简体中文","flag":"flag-icon-cn","script":"Hans","direction":"ltr","russian_pluralization":0,"date_format":"D MMMM YYYY","datetime_format":"D MMMM YYYY H:mm","active":1,"default":0,"parent_id":null,"lft":24,"rgt":25,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"zh_CN","tag":"zh","primary":"zh"},{"code":"ja","locale":"ja_JP","name":"Japanese","native":"日本語","flag":"flag-icon-jp","script":"Jpan","direction":"ltr","russian_pluralization":0,"date_format":"D MMMM YYYY","datetime_format":"D MMMM YYYY H:mm","active":1,"default":0,"parent_id":null,"lft":26,"rgt":27,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"ja_JP","tag":"ja","primary":"ja"},{"code":"he","locale":"he_IL","name":"Hebrew","native":"עִברִית","flag":"flag-icon-il","script":"Hebr","direction":"rtl","russian_pluralization":0,"date_format":"D MMMM YYYY","datetime_format":"D MMMM YYYY H:mm","active":1,"default":0,"parent_id":null,"lft":28,"rgt":29,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"he_IL","tag":"he","primary":"he"},{"code":"th","locale":"th_TH","name":"Thai","native":"ไทย","flag":"flag-icon-th","script":"Thai","direction":"ltr","russian_pluralization":0,"date_format":"D MMMM YYYY","datetime_format":"D MMMM YYYY H:mm","active":1,"default":0,"parent_id":null,"lft":30,"rgt":31,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"th_TH","tag":"th","primary":"th"},{"code":"ro","locale":"ro_RO","name":"Romanian","native":"Română","flag":"flag-icon-ro","script":"Latn","direction":"ltr","russian_pluralization":0,"date_format":"D MMMM YYYY","datetime_format":"D MMMM YYYY H:mm","active":1,"default":0,"parent_id":null,"lft":32,"rgt":33,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"ro_RO","tag":"ro","primary":"ro"},{"code":"ka","locale":"ka_GE","name":"Georgian","native":"ქართული","flag":"flag-icon-ge","script":"Geor","direction":"ltr","russian_pluralization":0,"date_format":"YYYY [წლის] DD MM","datetime_format":"YYYY [წლის] DD MMMM, dddd H:mm","active":1,"default":0,"parent_id":null,"lft":34,"rgt":35,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"ka_GE","tag":"ka","primary":"ka"}]}}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/languages/{code}'
+    metadata:
+      groupName: Languages
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get language'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Content-Language: en
+      X-AppApiToken: Uk1DSFlVUVhIRXpHbWt6d2pIZjlPTG15akRPN2tJTUs=
+      X-AppType: docs
+    urlParameters:
+      code:
+        name: code
+        description: "The language's code."
+        required: true
+        example: en
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      code: en
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":null,"result":{"code":"en","locale":"en_US","name":"English","native":"English","flag":"flag-icon-gb","script":"Latn","direction":"ltr","russian_pluralization":0,"date_format":"MMM Do, YYYY","datetime_format":"MMM Do, YYYY [at] HH:mm","active":1,"default":1,"parent_id":null,"lft":2,"rgt":3,"depth":1,"created_at":"2023-11-16 11:35:47","updated_at":"2023-11-16 11:35:47","iso_locale":"en_US","tag":"en","primary":"en"}}'
+        headers:
+          content-type: 'application/json; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
